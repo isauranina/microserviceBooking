@@ -1,0 +1,240 @@
+{
+  "consumer": {
+    "name": "nurBnb-react-client"
+  },
+  "interactions": [
+    {
+      "description": "una peticion POST para registrar propiedad",
+      "providerStates": [
+        {
+          "name": "el sistema esta listo para registrar propiedades"
+        }
+      ],
+      "request": {
+        "body": {
+          "descripcion": "Departamento moderno cerca al centro",
+          "direccion": "Av. Principal #123",
+          "esVerificado": true,
+          "tipo": 1
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.descripcion": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.direccion": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.esVerificado": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.tipo": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "method": "POST",
+        "path": "/api/Propiedad"
+      },
+      "response": {
+        "body": {
+          "descripcion": "Departamento moderno cerca al centro",
+          "id": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.descripcion": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "una peticion GET para obtener propiedad por ID",
+      "providerStates": [
+        {
+          "name": "existe una propiedad con el ID proporcionado"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/Propiedad/123e4567-e89b-12d3-a456-426614174000"
+      },
+      "response": {
+        "body": {
+          "descripcion": "Casa 3 plantas centro",
+          "esVerificado": false,
+          "id": "123e4567-e89b-12d3-a456-426614174000",
+          "tipo": "casa"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.descripcion": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.esVerificado": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.tipo": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "una peticion GET para buscar departamentos",
+      "providerStates": [
+        {
+          "name": "existen propiedades tipo departamento"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/Propiedad",
+        "query": {
+          "searchTerm": [
+            "departamento"
+          ]
+        }
+      },
+      "response": {
+        "body": [
+          {
+            "descripcion": "Departamento amoblado 2 dormitorios",
+            "esVerificado": true,
+            "tipo": "departamento"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            },
+            "$[*].descripcion": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].esVerificado": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].tipo": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.5.2"
+    },
+    "pactRust": {
+      "ffi": "0.4.20",
+      "models": "1.2.0"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "propiedad-api"
+  }
+}

@@ -1,0 +1,313 @@
+[
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "GetAll",
+    "RelativePath": "api/Cuentas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Transacciones.Core.DTOs.Transacciones.CuentaDto, Transacciones.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "Create",
+    "RelativePath": "api/Cuentas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "crearCuentaDto",
+        "Type": "Transacciones.Core.DTOs.Transacciones.CrearCuentaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "GetById",
+    "RelativePath": "api/Cuentas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "Update",
+    "RelativePath": "api/Cuentas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cuentaDto",
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "Delete",
+    "RelativePath": "api/Cuentas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "GetDetalle",
+    "RelativePath": "api/Cuentas/{id}/detalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDetalleDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.CuentasController",
+    "Method": "GetByNumeroCuenta",
+    "RelativePath": "api/Cuentas/numero/{numeroCuenta}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeroCuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.CuentaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Auth.TokenController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/Token/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Transacciones.API.Controllers.Auth.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Auth.TokenController",
+    "Method": "ValidateToken",
+    "RelativePath": "api/Token/validate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.TransaccionesController",
+    "Method": "ProcesarTransaccion",
+    "RelativePath": "api/Transacciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "crearTransaccionDto",
+        "Type": "Transacciones.Core.DTOs.Transacciones.CrearTransaccionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.TransaccionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.TransaccionesController",
+    "Method": "GetById",
+    "RelativePath": "api/Transacciones/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Transacciones.Core.DTOs.Transacciones.TransaccionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.TransaccionesController",
+    "Method": "GetByCuentaId",
+    "RelativePath": "api/Transacciones/cuenta/{cuentaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cuentaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Transacciones.Core.DTOs.Transacciones.TransaccionDto, Transacciones.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Transacciones.API.Controllers.Transacciones.TransaccionesController",
+    "Method": "GetByCuentaIdAndDateRange",
+    "RelativePath": "api/Transacciones/cuenta/{cuentaId}/rango",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cuentaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Transacciones.Core.DTOs.Transacciones.TransaccionDto, Transacciones.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

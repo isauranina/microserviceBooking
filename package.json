@@ -1,0 +1,17 @@
+{
+  "name": "nurBnb",
+  "version": "1.0.0",
+  "description": "API cliente de alquiler de propiedades (Consumer)",
+  "main": "index.js",
+  "scripts": {
+    "test:pact": "jest src/tests"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^12.1.0",
+    "jest": "^29.7.0"
+  }
+}
+
