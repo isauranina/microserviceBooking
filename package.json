@@ -4,7 +4,7 @@
   "description": "API cliente de alquiler de propiedades (Consumer)",
   "main": "index.js",
   "scripts": {
-    "test:pact": "jest src/tests"
+    "test:pact": "jest src/Eventos.Tests"
   },
   "dependencies": {
     "axios": "^1.6.0"
